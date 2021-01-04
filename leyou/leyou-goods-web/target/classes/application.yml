@@ -1,0 +1,21 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: goods-web
+  thymeleaf:
+    cache: false  #提高速度，但是看不到自己的修改了
+  rabbitmq:
+    host: 192.168.48.130
+    username: leyou
+    password: leyou
+    virtual-host: /leyou
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5 #发送心跳时间
+    lease-expiration-duration-in-seconds: 10 #10s不发送过期
